@@ -17,7 +17,7 @@ public class articleAnalysis {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File file = new  File("/home/shashank/workspace/articleAnalysis/src/article.txt");
+		File file = new  File("/var/www/java/article.txt");
 		String article =" ";
 		Scanner scanner = null;
 		try {
@@ -48,7 +48,7 @@ public class articleAnalysis {
 		 
 		
 		
-		String csvFile = "/home/shashank/workspace/articleAnalysis/src/words.csv";
+		String csvFile = "/var/www/java/words.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -108,14 +108,10 @@ public class articleAnalysis {
 					s+=Float.parseFloat(number);
 					c++;
 				}
-				
-				
 			}
 			
 			avg=s/c;
 			System.out.println("Arousal is "+ avg);
-			
-			
 			
 			for(int i = 0; i < words.length; i++)
 			{
@@ -127,15 +123,14 @@ public class articleAnalysis {
 					s+=Float.parseFloat(number);
 					c++;
 				}
-				
-				
 			}
-			
 			avg=s/c;
 			System.out.println("Dominance is "+ avg);
 			
 			
-		/*	for (Map.Entry<String, String> entry : maps.entrySet()) {
+		/*	Iterate through the whole hash table
+		 * 
+		 * for (Map.Entry<String, String> entry : maps.entrySet()) {
 	 
 				//System.out.println("List [word= " + entry.getKey() + " , rating="+ entry.getValue() + "]");
 	 
@@ -160,3 +155,4 @@ public class articleAnalysis {
 	  }
 
 }
+
