@@ -118,14 +118,15 @@ echo "</pre>";
 }
 ?>
 
-						<li><?php echo "Dominance rating:" . $output[sizeof($output)-4];?>
+						<li><?php echo "Dominance rating:" . $output[sizeof($output)-6];?>
 </li>
-						<li><?php echo "Arousal rating:" . $output[sizeof($output)-3]; ?>
+						<li><?php echo "Arousal rating:" . $output[sizeof($output)-5]; ?>
 
 </li>
-						<li><?php echo "Dominance rating:" . $output[sizeof($output)-2]; ?>
+						<li><?php echo "Dominance rating:" . $output[sizeof($output)-4]; ?>
 </li>
-						<li><?php echo "Finn rating:" . $output[sizeof($output)-1]; ?></li>
+						<li><?php echo $output[sizeof($output)-3]; ?>
+						<li><?php echo "Finn rating:" . $output[sizeof($output)-2]; ?></li>
 					</ol>
 				</section></article>
 		

@@ -63,7 +63,7 @@
 					<h2>Analysis</h2>
 					<p>Just enter the text to be analyzed</p>
 				</header>
-				<form action="myform1.php" method="post">
+				<form action="index.php" method="post">
 					<div class="row half">
 						<div class="12u">
 		<textarea type="text" rows="20" cols="50" name="formMovie" value="enter the text" /></textarea>
