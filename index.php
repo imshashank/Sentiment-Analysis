@@ -66,7 +66,7 @@
 				<form action="index.php#rating" method="post">
 					<div class="row half">
 						<div class="12u">
-		<textarea type="text" rows="20" cols="20" name="formMovie" value="enter the text" /></textarea>
+		<textarea type="text" rows="5" cols="10" name="formMovie" value="enter the text" /></textarea>
 
 						</div>
 					</div>
@@ -118,7 +118,7 @@ echo "</pre>";
 }
 ?>
 
-						<li><?php echo "Dominance rating:" . $output[sizeof($output)-6];?>
+						<li><?php echo "Valence rating:" . $output[sizeof($output)-6];?>
 </li>
 						<li><?php echo "Arousal rating:" . $output[sizeof($output)-5]; ?>
 
