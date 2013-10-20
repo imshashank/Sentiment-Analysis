@@ -63,7 +63,7 @@
 					<h2>Analysis</h2>
 					<p>Just enter the text to be analyzed</p>
 				</header>
-				<form action="index.php" method="post">
+				<form action="index.php#rating" method="post">
 					<div class="row half">
 						<div class="12u">
 		<textarea type="text" rows="20" cols="50" name="formMovie" value="enter the text" /></textarea>
@@ -81,7 +81,7 @@
 					</div>
 				</form>
 			</article>
-<article class="container box style3">
+<article class="container box style3" id="rating">
 <section>
 					<header>
 						<h3>The ratings</h3>
