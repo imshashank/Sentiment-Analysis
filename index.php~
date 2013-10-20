@@ -1,3 +1,38 @@
+<?php
+if($_POST['formSubmit'] == "Submit")
+{
+        $errorMessage = "";
+
+        if(empty($_POST['formMovie']))
+        {
+                $errorMessage .= "<li>You forgot to enter the data!</li>";
+        }
+
+        $varMovie = $_POST['formMovie'];
+
+
+        if(empty($errorMessage)) 
+        {
+
+//$file = fopen("article.txt","w");
+//echo fwrite($file,"Hello World. Testing!");
+//fclose($file);
+
+                $fs = fopen("article.txt","w");
+                fwrite($fs,$varMovie);
+//file_put_contents($fs, $varMovie);
+                fclose($fs);
+                exec('java articleAnalysis ', $output);
+echo "<pre>";
+                print_r($output);
+echo "</pre>";
+//              header("Location: thankyou.html");
+                exit;
+        }
+}
+?>
+
+
 <!DOCTYPE HTML>
 <!--
 	Overflow 1.0 by HTML5 UP
@@ -49,13 +84,6 @@
 			</section>
 				
 		<!-- Contact -->
-	<?php
-		if(!empty($errorMessage)) 
-		{
-			echo("<p>There was an error with your form:</p>\n");
-			echo("<ul>" . $errorMessage . "</ul>\n");
-		} 
-	?>
 	
 <section>
 			<article class="container box style3">
@@ -89,36 +117,6 @@
 						<h3>The ratings</h3>
 					</header>
 					<ol class="default">
-<?php
-if($_POST['formSubmit'] == "Submit")
-{
-        $errorMessage = "";
-        
-        if(empty($_POST['formMovie']))
-        {
-                $errorMessage .= "<li>You forgot to enter the data!</li>";
-        }
-        
-        $varMovie = $_POST['formMovie'];
-        
-
-        if(empty($errorMessage)) 
-        {
-                $fs = fopen("article.txt","w");
-                fwrite($fs,$varMovie);
-                fclose($fs);
-                exec('java articleAnalysis ' . $file, $output);
-/*
-echo "<pre>";
-
-                print_r($output);
-echo "</pre>";
-
-                exit;
-*/
-        }
-}
-?>
 
 						<li><?php echo "Valence rating:" . $output[sizeof($output)-6];?>
 </li>

@@ -22,7 +22,8 @@ if($_POST['formSubmit'] == "Submit")
                 fwrite($fs,$varMovie);
 //file_put_contents($fs, $varMovie);
                 fclose($fs);
-                exec('java articleAnalysis ', $output);
+		exec('javac articleAnalysis.java');
+                exec('javac articleAnalysis.javajava articleAnalysis ', $output);
 echo "<pre>";
                 print_r($output);
 echo "</pre>";
