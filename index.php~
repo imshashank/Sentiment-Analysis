@@ -106,12 +106,14 @@ if($_POST['formSubmit'] == "Submit")
                 fwrite($fs,$varMovie);
                 fclose($fs);
                 exec('java articleAnalysis ' . $file, $output);
+/*
 echo "<pre>";
 
                 print_r($output);
 echo "</pre>";
 
                 exit;
+*/
         }
 }
 ?>
