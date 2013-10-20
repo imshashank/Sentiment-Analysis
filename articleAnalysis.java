@@ -107,7 +107,7 @@ public class articleAnalysis {
 			}
 			System.out.println("Found total of "+c+" words in ANEW lexicon");
 			float avg=s/c;
-			System.out.println("Valence is "+ avg);
+			System.out.println(avg);
 			c=0;
 			s=0;
 			for(int i = 0; i < words.length; i++)
@@ -123,7 +123,7 @@ public class articleAnalysis {
 			}
 			
 			avg=s/c;
-			System.out.println("Arousal is "+ avg);
+			System.out.println(avg);
 			c=0;
 			s=0;
 			for(int i = 0; i < words.length; i++)
@@ -138,7 +138,7 @@ public class articleAnalysis {
 				}
 			}
 			avg=s/c;
-			System.out.println("Dominance is "+ avg);
+			System.out.println(avg);
 			c=0;
 			s=0;
 			for(int i = 0; i < words.length; i++)
@@ -155,7 +155,7 @@ public class articleAnalysis {
 			}
 			System.out.println("Found total of "+c+" words in FINN lexicon");
 			avg=s/c;
-			System.out.println("Finn Rating is "+ avg);
+			System.out.println(avg);
 			
 		/*	Iterate through the whole hash table
 		 * 
