@@ -125,8 +125,10 @@ echo "</pre>";
 </li>
 						<li><?php echo "Dominance rating:" . $output[sizeof($output)-4]; ?>
 </li>
-						<li><?php echo $output[sizeof($output)-3]; ?>
-						<li><?php echo "Finn rating:" . $output[sizeof($output)-2]; ?></li>
+
+						<li><?php echo "Finn rating:" . $output[sizeof($output)-2]."</br>"; 
+							 echo $output[sizeof($output)-3];
+?></li>
 					</ol>
 				</section></article>
 		

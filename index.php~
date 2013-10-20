@@ -63,7 +63,7 @@
 					<h2>Analysis</h2>
 					<p>Just enter the text to be analyzed</p>
 				</header>
-				<form action="index.php" method="post">
+				<form action="index.php#rating" method="post">
 					<div class="row half">
 						<div class="12u">
 		<textarea type="text" rows="20" cols="50" name="formMovie" value="enter the text" /></textarea>
@@ -125,8 +125,8 @@ echo "</pre>";
 </li>
 						<li><?php echo "Dominance rating:" . $output[sizeof($output)-4]; ?>
 </li>
-						<li><?php echo $output[sizeof($output)-3]; ?>
-						<li><?php echo "Finn rating:" . $output[sizeof($output)-2]; ?></li>
+
+						<li><?php echo $output[sizeof($output)-3]; ?><?php echo "Finn rating:" . $output[sizeof($output)-2]; ?></li>
 					</ol>
 				</section></article>
 		
