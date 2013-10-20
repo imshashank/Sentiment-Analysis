@@ -57,8 +57,9 @@
 		} 
 	?>
 	
-
+<section>
 			<article class="container box style3">
+
 				<header>
 					<h2>Analysis</h2>
 					<p>Just enter the text to be analyzed</p>
@@ -81,6 +82,7 @@
 					</div>
 				</form>
 			</article>
+</section>
 <article class="container box style3" id="rating">
 <section>
 					<header>

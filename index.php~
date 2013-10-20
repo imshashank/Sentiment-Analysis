@@ -118,7 +118,7 @@ echo "</pre>";
 }
 ?>
 
-						<li><?php echo "Dominance rating:" . $output[sizeof($output)-6];?>
+						<li><?php echo "Valence rating:" . $output[sizeof($output)-6];?>
 </li>
 						<li><?php echo "Arousal rating:" . $output[sizeof($output)-5]; ?>
 
