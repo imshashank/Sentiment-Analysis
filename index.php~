@@ -85,40 +85,21 @@
 			</article>
 		
 		<!-- Contact -->
-	<?php
-		if(!empty($errorMessage)) 
-		{
-			echo("<p>There was an error with your form:</p>\n");
-			echo("<ul>" . $errorMessage . "</ul>\n");
-		} 
-	?>
-	<form action="myform1.php" method="post">
-		<p>
-			Enter text to rate?<br>
-
-			<textarea type="text" rows="20" cols="50" name="formMovie" value="enter the text" /></textarea>
-		</p>
-		<input type="submit" name="formSubmit" value="Submit" />
-	</form>
-
 			<article class="container box style3">
 				<header>
 					<h2>Analysis</h2>
 					<p>Just enter the text to be analyzed</p>
 				</header>
-				<form action="myform1.php" method="post">
+				<form>
 					<div class="row half">
 						<div class="12u">
-		<textarea type="text" rows="20" cols="50" name="formMovie" value="enter the text" /></textarea>
-
+							<textarea name="message" placeholder="Message"></textarea>
 						</div>
 					</div>
 					<div class="row">
 						<div class="12u">
 							<ul class="actions">
-								<li>
-		<input type="submit" name="formSubmit"class="button form" value="Submit" />
-</li>
+								<li><input type="submit" class="button form">Submit</a></li>
 							</ul>
 						</div>
 					</div>
