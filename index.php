@@ -66,7 +66,7 @@
 				<form action="index.php#rating" method="post">
 					<div class="row half">
 						<div class="12u">
-		<textarea type="text" rows="20" cols="50" name="formMovie" value="enter the text" /></textarea>
+		<textarea type="text" rows="20" cols="20" name="formMovie" value="enter the text" /></textarea>
 
 						</div>
 					</div>
