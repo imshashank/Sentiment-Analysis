@@ -10,9 +10,14 @@ The word list is defined in a words.csv file.
 We are using the ANEW words list and trying to find the valence,arousal and dominance of the words found in the article.
 
 Developed by:
+
 Shashank Agarwal
+
 Mail me at mail[at]shashank.pw
+
 URL: http://shashank.pw
+
+......................................................................................................
 
 Sample output:
 
