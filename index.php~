@@ -84,7 +84,7 @@
 <article class="container box style3">
 <section>
 					<header>
-						<h3>Ordered List</h3>
+						<h3>The ratings</h3>
 					</header>
 					<ol class="default">
 <?php
