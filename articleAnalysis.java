@@ -17,7 +17,7 @@ public class articleAnalysis {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File file = new  File("/var/www/java/article.txt");
+		File file = new  File("/home/shashank/workspace/articleAnalysis/src/article.txt");
 		String article =" ";
 		Scanner scanner = null;
 		try {
@@ -48,8 +48,8 @@ public class articleAnalysis {
 		 
 		
 		
-		String csvFile = "/var/www/java/words.csv";
-		String csvFile2 = "/var/www/java/finn.csv";
+		String csvFile = "/home/shashank/workspace/articleAnalysis/src/words.csv";
+		String csvFile2 = "/home/shashank/workspace/articleAnalysis/src/finn.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -105,7 +105,7 @@ public class articleAnalysis {
 				
 				
 			}
-			System.out.println("Found total of "+c+" words in ANEW list");
+			System.out.println("Found total of "+c+" words in ANEW lexicon");
 			float avg=s/c;
 			System.out.println("Valence is "+ avg);
 			c=0;
@@ -149,6 +149,7 @@ public class articleAnalysis {
 				if (number!=null){
 					//System.out.println("Word= "+words[i] +" Rating: "+number);
 					s+=Float.parseFloat(number);
+					System.out.println("Word= "+words[i] +" Rating: "+number);
 					c++;
 				}
 			}
@@ -183,4 +184,3 @@ public class articleAnalysis {
 	  }
 
 }
-
