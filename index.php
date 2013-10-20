@@ -53,13 +53,13 @@ $myFile = "article.txt";
 					<p>by Shashank Agarwal</p>
 				</header>
 				<footer>
-					<a href="#banner" class="button style2 scrolly">About the project</a>
+					<a href="#banner1" class="button style2 scrolly">About the project</a>
 				</footer>
 			</section>
 		
 		<!-- Banner -->
 			<section id="banner">
-				<header>
+				<header id="banner1">
 					<h2>Sentiment Analysis</h2>
 				</header>
 				<p>This is a simple word by word analysis tool to rate a piece of text.<br />
@@ -82,7 +82,10 @@ $myFile = "article.txt";
 				<form action="index.php#rating" method="post" >
 					<div class="row half" id="first">
 						<div class="12u">
-		<textarea type="text" rows="4" cols="10" name="formMovie" value="enter the text" /></textarea>
+		<textarea type="text" rows="4" cols="10" name="formMovie" value="" />
+<?php if($_POST['formMovie']!=NULL) echo $_POST['formMovie'];
+else echo "";?>
+</textarea>
 						</div>
 					</div>
 					<div class="row">
@@ -102,19 +105,31 @@ $myFile = "article.txt";
 					<header>
 						<h3>The ratings</h3>
 					</header>
+<p>
+<b>Anew Rating: </b><p> This rates the given text on a scale of 10 and tells how happy (+10) or sad(0) the text is.
+Valence, dominance and arousal are different rating levels and have different mathematical meaning in the analysis.
+</p>
+
 					<ol class="default">
 
-						<li><?php echo "Valence rating:" . $output[sizeof($output)-6];?>
+						<li><?php echo "Valence rating: " . $output[sizeof($output)-6];?>
 </li>
-						<li><?php echo "Arousal rating:" . $output[sizeof($output)-5]; ?>
+						<li><?php echo "Arousal rating: " . $output[sizeof($output)-5]; ?>
 
 </li>
-						<li><?php echo "Dominance rating:" . $output[sizeof($output)-4]; ?>
+						<li><?php echo "Dominance rating: " . $output[sizeof($output)-4]; ?>
 </li>
+</ol>
+<p><b>Finn rating:</b></p>
+<p>If u have a positive FINN rating, it means that the text had happy and positive feelings. While if it is below zero, it denotes sadness or
+negativity. It has a scale of +5 to -5.
+</p>
+<ol class="default">
 
-						<li><?php echo "Finn rating:" . $output[sizeof($output)-2]."</br>"; 
+						<li><?php echo "Finn rating: " . $output[sizeof($output)-2]."</br>"; 
 							 echo $output[sizeof($output)-3];
 ?></li>
+
 					</ol>
 				</section></article>
 		

@@ -17,8 +17,10 @@ public class articleAnalysis {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File file = new  File("/var/www/java/article.txt");
+//		File file = new  File("/var/www/java/article.txt");
+
 		String article =" ";
+/*
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(file);
@@ -36,6 +38,49 @@ public class articleAnalysis {
 			article+=tmp;
 			
 	    }
+*/
+
+// The name of the file to open.
+        String fileName = "/var/www/java/article.txt";
+
+        // This will reference one line at a time
+        String line = null;
+
+  try {
+            // FileReader reads text files in the default encoding.
+            FileReader fileReader = 
+                new FileReader(fileName);
+
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader = 
+                new BufferedReader(fileReader);
+
+            while((line = bufferedReader.readLine()) != null) {
+//                System.out.println(line);
+ String tmp = line;
+                        tmp =tmp.replace("'"," ");
+                        tmp=tmp.replaceAll("(http://|http://www\\.|www\\.)","");
+                        //removes all numbers and symbols
+                        tmp=tmp.replaceAll("[^A-Za-z0-9 ]", "");
+                        article+=tmp;
+
+            }	
+
+            // Always close files.
+            bufferedReader.close();			
+        }
+        catch(FileNotFoundException ex) {
+            System.out.println(
+                "Unable to open file '" + 
+                fileName + "'");				
+        }
+        catch(IOException ex) {
+            System.out.println(
+                "Error reading file '" 
+                + fileName + "'");					
+            // Or we could just do this: 
+            // ex.printStackTrace();
+        }
 	    
 		
 		
@@ -149,7 +194,7 @@ public class articleAnalysis {
 				if (number!=null){
 					//System.out.println("Word= "+words[i] +" Rating: "+number);
 					s+=Float.parseFloat(number);
-					System.out.println("Word= "+words[i] +" Rating: "+number);
+			//		System.out.println("Word= "+words[i] +" Rating: "+number);
 					c++;
 				}
 			}
