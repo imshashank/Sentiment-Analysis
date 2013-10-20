@@ -1,4 +1,6 @@
 <?php
+//error_reporting(E_ALL);
+//ini_set('display_errors', true);
 if($_POST['formSubmit'] == "Submit")
 {
         $errorMessage = "";
@@ -13,33 +15,17 @@ if($_POST['formSubmit'] == "Submit")
 
         if(empty($errorMessage)) 
         {
+$myFile = "article.txt";
 
-//$file = fopen("article.txt","w");
-//echo fwrite($file,"Hello World. Testing!");
-//fclose($file);
-
-                $fs = fopen("article.txt","w");
-                fwrite($fs,$varMovie);
-//file_put_contents($fs, $varMovie);
-                fclose($fs);
-		exec('javac articleAnalysis.java');
-                exec('javac articleAnalysis.javajava articleAnalysis ', $output);
-echo "<pre>";
-                print_r($output);
-echo "</pre>";
-//              header("Location: thankyou.html");
-                exit;
+		$fh = fopen($myFile, 'w') or die("can't open file");
+		fwrite($fh,$varMovie);
+		fclose($fh);
+	//	exec('javac articleAnalysis.java',$o);
+                exec('java articleAnalysis ', $output);
+//print_r($output);
         }
 }
-?>
-
-
-<!DOCTYPE HTML>
-<!--
-	Overflow 1.0 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+?><!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Sentiment Analysis by Shashank Agarwal</title>
@@ -87,17 +73,16 @@ echo "</pre>";
 		<!-- Contact -->
 	
 <section>
-			<article class="container box style3">
+			<article class="container box style3" >
 
 				<header>
 					<h2>Analysis</h2>
 					<p>Just enter the text to be analyzed</p>
 				</header>
-				<form action="index.php" method="post">
-					<div class="row half">
+				<form action="index.php#rating" method="post" >
+					<div class="row half" id="first">
 						<div class="12u">
-		<textarea type="text" rows="5" cols="10" name="formMovie" value="enter the text" /></textarea>
-
+		<textarea type="text" rows="4" cols="10" name="formMovie" value="enter the text" /></textarea>
 						</div>
 					</div>
 					<div class="row">

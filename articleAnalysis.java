@@ -17,7 +17,7 @@ public class articleAnalysis {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File file = new  File("/home/shashank/workspace/articleAnalysis/src/article.txt");
+		File file = new  File("/var/www/java/article.txt");
 		String article =" ";
 		Scanner scanner = null;
 		try {
@@ -48,8 +48,8 @@ public class articleAnalysis {
 		 
 		
 		
-		String csvFile = "/home/shashank/workspace/articleAnalysis/src/words.csv";
-		String csvFile2 = "/home/shashank/workspace/articleAnalysis/src/finn.csv";
+		String csvFile = "/var/www/java/words.csv";
+		String csvFile2 = "/var/www/java/finn.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";

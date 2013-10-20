@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+
 if($_POST['formSubmit'] == "Submit")
 {
 	$errorMessage = "";
@@ -10,14 +13,15 @@ if($_POST['formSubmit'] == "Submit")
 	
 	$varMovie = $_POST['formMovie'];
 	
-
 	if(empty($errorMessage)) 
 	{
 		$myFile = "article.txt";
 		$fh = fopen($myFile, 'w') or die("can't open file");
-		fwrite($fs,$varMovie);
-		fclose($fs);
+echo $varMovie;
+		fwrite($fh,$varMovie);
+		fclose($fh);
 		exec('java articleAnalysis ', $output);
+echo "java";
 echo "<pre>";
 		print_r($output);
 echo "</pre>";
