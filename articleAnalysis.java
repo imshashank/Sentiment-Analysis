@@ -49,6 +49,7 @@ public class articleAnalysis {
 		
 		
 		String csvFile = "/var/www/java/words.csv";
+		String csvFile2 = "/var/www/java/finn.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -58,6 +59,7 @@ public class articleAnalysis {
 			Map<String, String> maps = new HashMap<String, String>();
 			Map<String, String> arousal = new HashMap<String, String>();
 			Map<String, String> dominance = new HashMap<String, String>();
+			Map<String, String> finn = new HashMap<String, String>();
 	 
 			br = new BufferedReader(new FileReader(csvFile));
 			while ((line = br.readLine()) != null) {
@@ -70,7 +72,16 @@ public class articleAnalysis {
 				dominance.put(word[0], word[6]);
 	 
 			}
-
+			br = new BufferedReader(new FileReader(csvFile2));
+			while ((line = br.readLine()) != null) {
+	 
+				// use comma as separator
+				String[] word = line.split(cvsSplitBy);
+	 
+				finn.put(word[0], word[1]);
+					 
+			}
+			
 			System.out.println(article);
 			String values=article;
 		
@@ -94,10 +105,11 @@ public class articleAnalysis {
 				
 				
 			}
-			System.out.println("Found total of "+c+" words");
+			System.out.println("Found total of "+c+" words in ANEW list");
 			float avg=s/c;
 			System.out.println("Valence is "+ avg);
-			
+			c=0;
+			s=0;
 			for(int i = 0; i < words.length; i++)
 			{
 				//String s = words[i];
@@ -112,7 +124,8 @@ public class articleAnalysis {
 			
 			avg=s/c;
 			System.out.println("Arousal is "+ avg);
-			
+			c=0;
+			s=0;
 			for(int i = 0; i < words.length; i++)
 			{
 				//String s = words[i];
@@ -126,7 +139,22 @@ public class articleAnalysis {
 			}
 			avg=s/c;
 			System.out.println("Dominance is "+ avg);
-			
+			c=0;
+			s=0;
+			for(int i = 0; i < words.length; i++)
+			{
+				//String s = words[i];
+				
+				String number = finn.get((String)words[i]);
+				if (number!=null){
+					//System.out.println("Word= "+words[i] +" Rating: "+number);
+					s+=Float.parseFloat(number);
+					c++;
+				}
+			}
+			System.out.println("Found total of "+c+" words in FINN lexicon");
+			avg=s/c;
+			System.out.println("Finn Rating is "+ avg);
 			
 		/*	Iterate through the whole hash table
 		 * 
