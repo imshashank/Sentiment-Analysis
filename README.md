@@ -3,6 +3,10 @@ Sentiment-Analysis
 
 Sentiment Analysis
 
+Update:
+The code was modifed to include the FINN list and have better UI.
+
+About:
 A java program that uses hash function to map words in an article and maps then to the given word list.
 
 The word list is defined in a words.csv file.
@@ -15,7 +19,7 @@ Shashank Agarwal
 
 Mail me at mail[at]shashank.pw
 
-URL: http://shashank.pw
+URL: http://shashank.pw/java/
 
 ......................................................................................................
 
