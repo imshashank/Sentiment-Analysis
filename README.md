@@ -15,13 +15,19 @@ We are using the ANEW words list and trying to find the valence,arousal and domi
 
 Developed by:
 
-Shashank Agarwal
+[Shashank Agarwal](https://www.linkedin.com/in/shashankagarwal2/)
 
 Mail me at mail[at]shashank.pw
 
 Demo: http://thegeeklabs.com/java/
 
 URL: http://shashank.pw/
+
+## Reading the archived example
+
+The Java implementation looks up tokens in the supplied lexicons and averages the ratings for matches. Preserve the match count beside the averages when comparing two documents. A document with only one matched occurrence can have the same average as one with broad coverage. The historical output below has 20 matched occurrences in 318 words, about 6.3% coverage. It also reports a match for each occurrence of repeated words such as “price.”
+
+The source splits text on spaces and uses exact lookups. It does not model context or negation, and its original server-side file paths require adjustment for a local run.
 
 ......................................................................................................
 
